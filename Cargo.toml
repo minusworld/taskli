@@ -1,8 +1,12 @@
 [package]
-name = "taskr"
-version = "0.1.0"
-authors = ["grayson <grayson@returntocorp.com>"]
+name = "taskli"
+version = "0.0.1"
+authors = ["minusworld <locrian.vii@gmail.com>"]
 edition = "2018"
+description = "A simple CLI tool for managing task lists."
+repository = "https://github.com/minusworld/taskli"
+keywords = ["cli", "task", "task management", "todo", "task list"]
+categories = ["command-line-utilities"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
