@@ -51,7 +51,7 @@ $ taskli show 1
  ```
 
  ## Installation
-You'll need the Rust toolchain.
+You'll need the Rust toolchain. Then:
 
 ```bash
 $ git clone https://github.com/minusworld/taskli
