@@ -56,5 +56,6 @@ You'll need the Rust toolchain. Then:
 ```bash
 $ git clone https://github.com/minusworld/taskli
 $ cd taskli
-$ cargo install
+$ cargo build
+$ ln target/debug/taskli /usr/local/bin/taskli # Or something like this
 ```
