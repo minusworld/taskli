@@ -3,6 +3,7 @@ use clap::{value_t, App, Arg, AppSettings};
 use rusqlite::{params, Connection, NO_PARAMS};
 #[macro_use] extern crate prettytable;
 use prettytable::{format, Table};
+use dirs::home_dir;
 
 struct Task {
     id: Option<i64>,
@@ -118,7 +119,10 @@ fn show_task_details(conn: &Connection, task_id: i64) -> Result<(), rusqlite::Er
 }
 
 fn initialize() -> Result<Connection, rusqlite::Error> {
-    let conn = Connection::open("test.db")?;
+    let mut db_path = home_dir().unwrap();
+    db_path.push(".taskli");
+    db_path.set_extension("db");
+    let conn = Connection::open(db_path)?;
 
     // Create tasks table
     conn.execute(
@@ -145,10 +149,10 @@ fn initialize() -> Result<Connection, rusqlite::Error> {
 }
 
 fn main() -> () {
-    let version = "0.0.1";
+    let version = "0.0.2";
     let author = "minusworld";
 
-    let app = App::new("taskr")
+    let app = App::new("taskli")
         .setting(AppSettings::ArgRequiredElseHelp)
         .version(version)
         .author(author)

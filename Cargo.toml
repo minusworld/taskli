@@ -1,6 +1,6 @@
 [package]
 name = "taskli"
-version = "0.0.1"
+version = "0.0.2"
 authors = ["minusworld <locrian.vii@gmail.com>"]
 edition = "2018"
 description = "A simple CLI tool for managing task lists."
@@ -15,3 +15,4 @@ chrono = "0.4"
 clap = { version = "2.33.1" }
 rusqlite = { version = "0.21.0", features = ["bundled"] }
 prettytable-rs = "^0.8"
+dirs = "3.0.1"
